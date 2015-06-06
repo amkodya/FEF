@@ -1,0 +1,59 @@
+/* CSS - GROCERY LIST */
+
+body {
+	font-family: "Helvetica", sans-serif;
+	color: #FFFFA6;
+	font-size: 20px;
+	text-align: center;
+
+	background: #05abe0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #05abe0 0%, #53cbf1 60%, #87e0fd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#05abe0), color-stop(60%,#53cbf1), color-stop(100%,#87e0fd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#87e0fd',GradientType=0 ); /* IE6-9 */
+}
+div:nth-child(1){
+	background: #C9D787;
+	border-radius: 20px;
+	width: 400px;
+	padding: 30px;
+	margin: 50px 500px;
+}
+div#add {
+	padding: 0;
+	margin: 0;
+}
+h1,
+h4 {
+	color: #016669;
+	font-size: 40px;
+}
+h4 {
+	font-size: 20px;
+}
+table {
+	width: 200px;
+	background: #29D9C2;
+	margin-left: 100px;
+	padding: 10px;
+	border-radius:;
+}
+button,
+input {
+	background-color: #BDF271;
+	border-radius: 4px;
+	border-style: none;
+}
+input {
+	background-color: #FFFFD7;
+	padding: 5px;
+	width: 300px;
+}
+button:hover,
+input:hover {
+	background-color: #016669;
+	color: #FFFFD7;
+}

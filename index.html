@@ -1,0 +1,42 @@
+<!-- Grocery List html -->
+
+<html>
+<head>
+<title>Grocery List</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	
+</head>
+<body ng-app="myApp">   <!-- APP STARTS HERE  -->
+	<div ng-controller="GroceryController">  <!-- DATA BINDING -->
+		<h1>Grocery List</h1>
+
+		<div>
+			<form ng-submit="addItem()">  <!-- NG-SUBMIT ALLOWS addItem() -->
+				<div id="add">
+					<input type="text" ng-model="newItem" placeholder="Add Grocery Item" /> <!-- whatever is typed, becomes newItem variable -->
+					<button type="submit">Save</button>  <!-- SAVED TO FUNCTION -->
+				</div>
+			</form>
+		</div>
+		<p>{{ newItem }}</p> <!-- DISPLAY VARIBALE newItem -->
+
+
+		<div>
+			<h4>Items {{ groceries.length }}</h4> <!-- displays number of items in array "items=4" -->
+				<table>
+					<tr ng-repeat="gro in groceries"> <!--repeats items in array - how we get "gro"-->
+						<td>{{gro}}</td>  <!-- display item name-->
+						<td>
+						<button ng-click="removeItem(gro)">&times;<!--diplays x--></button> <!--when clicked, allows to add function of item removal -->
+						</td>
+					</tr>
+				</table>
+		</div>
+	</div>
+
+
+</body>
+</html>
