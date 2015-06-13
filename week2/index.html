@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Employee Directory</title>
+		<script src="js/angular.min.js"></script> 
+		<script src="js/app.js"></script>
+		<script src="js/dataService.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+	</head>
+	<body ng-app="MyApp" ng-controller="MyNewController">
+		<header>
+		<div id="form">
+			<h2>Employee Directory</h2>
+			<h3>Add an Entry</h3>
+				<form>
+					<div>
+						<label>Employee:</label>
+						<input type="text" name="company" ng-model='newAddress.company'>
+					</div>
+					<div>
+						<label>Street:</label>
+						<input type="text" name="street" ng-model='newAddress.street'><br>
+					</div>
+					<div>
+						<label>City:</label>
+						<input type="text" name="city" ng-model='newAddress.city'><br>
+					</div>
+					<div>
+						<label>State:</label>
+						<input type="text" name="state" ng-model='newAddress.state'><br>
+					</div>
+					<div>
+						<label>Zip-Code:</label>
+						<input type="text" name="company" ng-model='newAddress.zipCode'><br>
+					</div>
+					<div>
+						<input type="submit" ng-click="addNewAddress()" value="Add Entry"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</header>
+	<section>
+
+		<div ng-repeat="addy in addresses track by $index" id="entry">
+			<div>
+				<input type="button" ng-click="removeAddy($index)" value="&times;"></input>
+				<h1>{{addy.name}}</h1>
+			</div>
+			<div>
+				{{addy.address}}<br>
+				{{addy.city}}, {{addy.state}} {{addy.zip}}
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+	</body>
+</html>
