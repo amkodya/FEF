@@ -1,0 +1,35 @@
+<div id="mainContent" ng-controller="BillsController">
+
+
+	<!-- add new bill form-->
+	<div class="formSection">
+		<h2>Bills to Pay</h2>
+		<form>
+			<input type="text" placeholder="Biller Name" ng-model="billerName" />
+			<input type="text" placeholder="Amount" ng-model="billAmount" />
+			<input type="text" placeholder="Due Date" ng-model="billDueDate" />
+			<input type="submit" class="btn" value="Add Bill" ng-click="addBill()" />
+			<input type="button" class="btn" value="Reset" ng-click="resetForm()" />
+		</form>
+	</div>
+
+	<!-- iteration through bills array to display each list item -->
+	<div class="listSection">
+		<table>
+			<tr>
+				<th>Biller Name</th>
+				<th>Amount</th>
+				<th>Due Date</th>
+				<th>Mark Complete</th>
+			</tr>
+			<tr ng-repeat="bill in billArray | orderBy:'dueDate' track by $id($index)">
+				<td>{{ bill.name }}</td>
+				<td>{{ bill.amount | currency }}</td>
+				<td>{{ bill.dueDate }}</td>
+				<td><img src="images/discard.png" class="deleteIcon" ng-click="deleteBill(bill)" title="Delete Bill" alt="Delete Bill Icon" /></td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+

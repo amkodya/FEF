@@ -1,0 +1,36 @@
+<div id="mainContent" ng-controller="choreController">
+
+
+	<div id="outBox">
+
+		<!-- to add a new game -->
+		<div id="gameFormSection">
+			<h2>Chores for the Day</h2>
+			<form>
+				<input type="text" placeholder="Add a Chore" ng-model="chore" />
+				<input type="submit" class="btn" value="Add Chore" ng-click="addChore()" />
+				<div class="message">{{ msg }}</div>
+			</form>
+		</div> <!-- div id gameFormSection -->
+
+		<!-- param that displays dynamic word -->
+		<div id="paramBox">
+			<h4>Your route param of the day is:</h4>
+			<p id="paramWord"><h2>{{ word }}</h2></p>
+			<img id="cloud" src="images/cloud.png" alt="cloud clipart">
+		</div>
+
+	</div> <!-- close outBox div -->
+
+	<!-- interation through chore array to display each item -->
+	<div class="listSection">
+		<h3>Chores ( {{ choreArray.length }} ):</h3>
+
+		<ul>
+			<!-- repeat list items using angular -->
+			<li ng-repeat="noChore in choreArray track by $id($index)"><div><span>&rarr;&nbsp;&nbsp;{{ noChore }}</span></div><img src="images/discard.png" class="deleteIcon" ng-click="deleteChore(noChore)" title="Delete Game" alt="Delete Game Icon" /></li>
+
+		</ul>
+	</div>
+
+</div>

@@ -1,0 +1,147 @@
+/* CRUD APP CSS */
+
+body {
+	background: #88798C;
+	font-family: "Calibri", sans-serif;
+	color: #D9C699;
+	font-size: 14px;
+	float: left;
+	clear: none;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 30pt;
+	color: #000;
+}
+h2 {
+	color: #583263;
+}
+img {
+	width: 20px;
+	height: 20px;
+}
+/* table w/ JSON info */
+.listSection {
+	position: absolute;
+	top: 50px;
+	left: 420px;
+	border-radius: 0 0 10px 10px;
+	background: #583263;
+}
+table {
+	width: 700px;
+	height: 400px;
+	color: #fff;
+}
+th {
+	text-transform: uppercase;
+	color: #D9C699;
+}
+td {
+	font-size: 9pt;
+}
+tr:first-child {
+	background: #2D1A33;
+}
+tr:nth-child(even) {
+	background: #8E51A1;
+}
+/* form section for each view */
+.formSection,
+#gameFormSection {
+	background-color: #D9C699;
+	width: 300px;
+	height: 215px;
+	border-radius: 6px;
+	margin: 50px 0;
+	padding: 15px;
+}
+#gameFormSection {
+	height: 130px;
+}
+.formSection input,
+#gameFormSection input {
+	border-radius: 3px;
+	border-style: none;
+	width: 250px;
+	height: 30px;
+	margin-bottom: 10px;
+}
+input.btn,
+#gameFormSection input.btn {
+	width: 130px;
+	height: 30px;
+	float: right;
+	clear: both;
+	background-color: #2D1A33;
+	color: #fff;
+}
+input.btn:last-child,
+#gameFormSection input.btn:last-child {
+	float: left;
+	clear: none;
+	margin-left: 10px;
+}
+/* route param */
+#paramBox {
+	position: absolute;
+	top: 150px;
+	left: 800px;
+	width: 200px;
+	color: #000;
+	text-align: center;
+}
+#cloud {
+	width: 350px;
+	height: 200px;
+	position: absolute;
+	top: -80px;
+	right: -50px;
+	z-index: -100;
+}
+/* index.html containers */
+#container {
+	margin: 50px 0 0 50px;
+	background-color: #C3ADC9;
+	margin-bottom: 20px;
+	padding: 5px;
+	height: 150px;
+	text-align: center;
+	border-radius: 6px;
+}
+#container nav a {
+	text-decoration: none;
+}
+#container nav a input {
+	background-color: #653A73;
+	border-radius: 3px;
+	border-style: none;
+	color: #fff;
+	height: 30px;
+	width: 70px;
+	margin: 0 5px;
+}
+#container nav a input:hover {
+	background-color: #D9C699;
+}
+/* view 3 */
+ul {
+	width: 200px;
+	height: 250px;
+	float: left;
+	clear: none;
+	text-align: center;
+}
+li {
+	list-style-type: none;
+	width: 200px;
+		float: left;
+	clear: none;
+}
+
+
+
+
+
+
